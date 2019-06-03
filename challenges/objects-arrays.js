@@ -70,6 +70,13 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+function getUniversities(graduates){
+  universities.push(`${graduates.university}`)
+  return universities;
+};
+
+graduates.forEach(getUniversities);
+universities.sort();
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -79,11 +86,22 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+function getInfo(graduates){
+  contactInfo.push(`${graduates.first_name} ${graduates.email}`)
+  return contactInfo;
+};
+
+graduates.forEach(getInfo);
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+function checkUni(graduates){
+  
+ uni.push(graduates.filter(university === "Uni"))
+ return uni;
+};
 console.log(uni);
 
 
@@ -109,6 +127,12 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+function getNames(zooAnimals){
+  animalNames.push(`Name: ${zooAnimals.animal_name} Scientific: ${zooAnimals.scientific_name}`)
+  return animalNames;
+};
+
+zooAnimals.forEach(getNames);
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -118,6 +142,10 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
+function toLower (zooAnimals){
+  lowerCase.push(zooAnimals.animal_name.toLowerCase())
+}
+zooAnimals.map(toLower)
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -126,6 +154,11 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 const lowerPopulation = [];
+function lowerPop(zooAnimals){
+  zooAnimals.filter(population)
+    return zooAnimals.population < 5;
+  
+}
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
