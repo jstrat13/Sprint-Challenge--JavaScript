@@ -12,25 +12,36 @@
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 
-class Dinosaur {
-  constructor(name, diet, weight, length, period) {
-    this.name = name;
-    this.diet = diet;
-    this.weight = weight;
-    this.length = length;
-    this.period = period;
+const tyran = {
+  name: 'tyrannosaurus',
+  diet: 'carnivorous',
+  weight: 7000 + 'kg',
+  length: '12m',
+  period: 'Late Cretaceous',
+  roar: function (){
+    return 'RAWERSRARARWERSARARARRRR!'
   }
 }
 
-
-
-const tyran = new Dinosaur("tyrannosaurus","carnivorous", 7000 + "kg", 12 + "m", "Late Cretaceous" )
-
-tyran.roar = function(){
-  return "RAWERSRARARWERSARARARRRR!"
+const stego = {
+  name: 'stegosaurus',
+  diet: 'herbivorous',
+  weight: 2000 + 'kg',
+  length: '9m',
+  period: 'Late Jurassic',
 }
-const stego = new Dinosaur("stegosaurus","herbivorous", 2000 + "kg", 9 + "m", "Late Jurassic" )
-const veloc = new Dinosaur("velociraptor","carnivorous", 15 + "kg", 1.8 + "m", "Late Cretaceous" )
+
+const veloc = {
+  name: 'velociraptor',
+  diet: 'carnivorous',
+  weight: 15 + 'kg',
+  length: '1.8m',
+  period: 'Late Cretaceous',
+}
+
+
+
+
 
 // Using your dinosaur objects, log answers to these questions:
 
@@ -96,12 +107,9 @@ console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
-function checkUni(graduates){
-  
- uni.push(graduates.filter(university === "Uni"))
- return uni;
-};
+const uni = graduates.filter((graduates) => {
+  return graduates.university.includes('Uni') 
+});
 
 
 console.log(uni);
@@ -156,12 +164,10 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 const lowerPopulation = [];
-function lowerPop(zooAnimals){
-  zooAnimals.filter(population)
-    return zooAnimals.population < 5;
-  
+function lowerPop(){
+  zooAnimals.filter(zooAnimals);
+  return this.population > 5;
 }
-
 
 console.log(lowerPopulation);
 
@@ -170,10 +176,10 @@ console.log(lowerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
+const populationTotal = []
 
-console.log(populationTotal);
 
+console.log(populationTotal)
 
 /* 
 
