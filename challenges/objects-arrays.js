@@ -102,6 +102,8 @@ function checkUni(graduates){
  uni.push(graduates.filter(university === "Uni"))
  return uni;
 };
+
+
 console.log(uni);
 
 
@@ -159,6 +161,8 @@ function lowerPop(zooAnimals){
     return zooAnimals.population < 5;
   
 }
+
+
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
@@ -167,6 +171,7 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 const populationTotal = 0;
+
 console.log(populationTotal);
 
 

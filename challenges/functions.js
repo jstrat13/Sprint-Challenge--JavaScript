@@ -7,7 +7,7 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 function consume(num1, num2, callback){
-  return callback(num1, num2)
+  return callback(num1, num2);
 }
 
 
@@ -38,7 +38,8 @@ function greeting(first, last){
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: When nestedFunction() is created inside myFunction(), nestedFunction() 
+// then has access to the parameters and variables from the scope above.
 
 
 const external = "I'm outside the function";
